@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neurofrecuencia | Acompañamiento Neuroafirmativo</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    :root {
+      --charcoal: #101010;
+      --ivory: #FBF3E8;
+      --electric-blue: #0044FF;
+      --magenta: #9D26B0;
+      --gold: #E8AA42;
+      --text-main: #202124;
+      --text-muted: #535050;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Open Sans', sans-serif; background-color: var(--ivory); color: var(--text-main); overflow-x: hidden; }
+    h1, h2, h3, .font-heading { font-family: 'Montserrat', sans-serif; }
+    
+    .cta-button {
+      background: linear-gradient(105deg, #0044FF, #9D26B0);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(157, 38, 176, 0.3);
+    }
+  </style>
+</head>
+<body class="bg-[#FBF3E8] text-[#202124]">
+
+  <!-- NAVEGACIÓN -->
+  <header class="fixed top-4 z-50 w-full px-4">
+    <nav class="mx-auto flex max-w-5xl items-center justify-between rounded-2xl bg-white/90 px-5 py-3 shadow-md backdrop-blur-md border border-blue-900/10">
+      <a href="#inicio" class="flex items-center gap-2">
+        <!-- Logotipo oficial -->
+        <img src="Logo 1_3.png" alt="Logo Neurofrecuencia" class="h-7 w-auto object-contain">
+      </a>
+      <div class="hidden md:flex items-center gap-6 font-heading text-xs font-bold tracking-wider text-[#202124]">
+        <a href="#inicio" class="hover:text-[#9D26B0] transition-colors">INICIO</a>
+        <a href="#sobre-mi" class="hover:text-[#9D26B0] transition-colors">SOBRE MÍ</a>
+        <a href="#servicios" class="hover:text-[#9D26B0] transition-colors">SERVICIOS</a>
+        <a href="#ebook" class="hover:text-[#9D26B0] transition-colors">EBOOK</a>
+        <a href="#blog" class="hover:text-[#9D26B0] transition-colors">BLOG</a>
+      </div>
+      <a href="#reservas" class="cta-button rounded-full px-4 py-2 text-xs font-bold uppercase tracking-wider text-white shadow-sm">Reservar Cita</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- SECCIÓN INICIO (HERO) CON BANNER CENTRADO Y NÍTIDO -->
+    <section id="inicio" class="pt-32 pb-20 px-4">
+      <div class="max-w-5xl mx-auto text-center">
+        <span class="inline-block text-xs font-heading font-bold uppercase tracking-widest text-[#0044FF] mb-3">Acompañamiento Neuroafirmativo</span>
+        <h1 class="font-heading text-2xl md:text-3xl font-extrabold tracking-tight mb-6 text-[#202124]">
+          Cada mente, una frecuencia. <span class="text-[#9D26B0]">Cada frecuencia, una historia.</span>
+        </h1>
+
+        <!-- Contenedor centrado para la imagen del banner (sin pixelarse) -->
+        <div class="my-8 rounded-3xl overflow-hidden shadow-2xl border border-blue-950/15 bg-[#101010]">
+          <img src="gpt-image-2.5-sunburst_Panoramic_16_9_wide_hero_banner_on_a_deep_charcoal_dark_background_101010._On_th-0.jpg" alt="Banner Principal Neurofrecuencia" class="w-full h-auto object-contain">
+        </div>
+
+        <div class="max-w-2xl mx-auto bg-white/80 border border-blue-900/10 p-6 rounded-2xl shadow-sm mb-8">
+          <p class="text-base md:text-lg text-[#535050] italic leading-relaxed">
+            "Te ayudo a entender que quizá no eras difícil, solo estabas intentando encajar en una frecuencia que no era la tuya."
+          </p>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="#reservas" class="cta-button rounded-full px-7 py-3 font-heading text-xs font-bold uppercase tracking-wider text-white shadow-md">Agendar una Sesión</a>
+          <a href="#servicios" class="rounded-full px-7 py-3 font-heading text-xs font-bold uppercase tracking-wider border border-[#0044FF] text-[#0044FF] hover:bg-blue-50 transition-colors">Ver Servicios</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN SOBRE MÍ CON FOTO REAL -->
+    <section id="sobre-mi" class="py-20 bg-white px-4 border-t border-blue-900/10">
+      <div class="max-w-5xl mx-auto grid lg:grid-cols-2 gap-10 items-center">
+        <div class="relative mx-auto w-full max-w-xs rounded-2xl overflow-hidden shadow-lg border border-blue-950/10">
+          <img src="image_35d2e1.jpg" alt="Edith Reyes - Neurofrecuencia" class="w-full h-auto object-cover">
+        </div>
+        <div>
+          <span class="inline-block text-xs font-heading font-bold uppercase tracking-widest text-[#0044FF] mb-2">Sobre Mí</span>
+          <h2 class="font-heading text-xl md:text-2xl font-bold tracking-tight mb-4">Acompañando mentes a encontrar su propio ritmo.</h2>
+          <p class="text-base text-[#535050] leading-relaxed mb-6">
+            Trayectoria profesional combinada con el enfoque de <em>unmasking</em> (desenmascaramiento), ofreciendo un espacio clínico cálido, humano y libre de etiquetas rígidas.
+          </p>
+          <blockquote class="border-l-4 border-[#E8AA42] bg-[#F2ECFF] p-4 rounded-r-xl text-sm">
+            <p class="font-medium text-[#202124]">“Mi objetivo no es corregir tu forma de pensar, sino darte las herramientas para comprender tu propio mapa neurológico.”</p>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN SERVICIOS -->
+    <section id="servicios" class="py-20 bg-[#EDF2FF]/40 px-4">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center max-w-xl mx-auto mb-12">
+          <span class="inline-block text-xs font-heading font-bold uppercase tracking-widest text-[#0044FF] mb-2">Formas de Acompañar</span>
+          <h2 class="font-heading text-xl md:text-2xl font-bold tracking-tight">Nuestros Acompañamientos</h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6 mb-10">
+          <div class="bg-white p-6 rounded-2xl shadow-sm border border-blue-900/10">
+            <div class="w-10 h-10 rounded-xl bg-blue-50 text-[#0044FF] flex items-center justify-center mb-4">
+              <i data-lucide="sparkles" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-heading text-base font-bold mb-2">Sesiones Individuales</h3>
+            <p class="text-[#535050] text-sm leading-relaxed">Acompañamiento personalizado online o presencial enfocado en tus necesidades específicas.</p>
+          </div>
+          <div class="bg-white p-6 rounded-2xl shadow-sm border border-blue-900/10">
+            <div class="w-10 h-10 rounded-xl bg-purple-50 text-[#9D26B0] flex items-center justify-center mb-4">
+              <i data-lucide="users" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-heading text-base font-bold mb-2">Talleres y Grupos</h3>
+            <p class="text-[#535050] text-sm leading-relaxed">Espacios de psicoeducación, comunidad y validación compartida entre iguales.</p>
+          </div>
+          <div class="bg-white p-6 rounded-2xl shadow-sm border border-blue-900/10">
+            <div class="w-10 h-10 rounded-xl bg-amber-50 text-[#E8AA42] flex items-center justify-center mb-4">
+              <i data-lucide="compass" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-heading text-base font-bold mb-2">Evaluación y Orientación</h3>
+            <p class="text-[#535050] text-sm leading-relaxed">Diagnóstico comprensivo y mapas de procesamiento cognitivo adaptados a ti.</p>
+          </div>
+        </div>
+
+        <!-- Panel ND-Friendly -->
+        <div class="bg-white rounded-2xl p-6 md:p-8 border border-blue-900/10 shadow-sm">
+          <h3 class="font-heading text-base font-bold mb-4 flex items-center gap-2">
+            <i data-lucide="shield-check" class="text-[#9D26B0] w-5 h-5"></i> ¿Qué esperar de una sesión conmigo?
+          </h3>
+          <div class="grid md:grid-cols-3 gap-4 text-[#535050] text-sm">
+            <div class="flex items-start gap-2">
+              <i data-lucide="check" class="w-4 h-4 text-[#9D26B0] mt-0.5 shrink-0"></i>
+              <p>Uso de cámara opcional si experimentas fatiga sensorial.</p>
+            </div>
+            <div class="flex items-start gap-2">
+              <i data-lucide="check" class="w-4 h-4 text-[#9D26B0] mt-0.5 shrink-0"></i>
+              <p>Espacio libre para hacer pausas, moverte o autorregularte.</p>
+            </div>
+            <div class="flex items-start gap-2">
+              <i data-lucide="check" class="w-4 h-4 text-[#9D26B0] mt-0.5 shrink-0"></i>
+              <p>Cero necesidad de enmascarar ni aparentar normalidad.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN EBOOK -->
+    <section id="ebook" class="py-20 bg-[#101010] text-white px-4">
+      <div class="max-w-5xl mx-auto grid lg:grid-cols-2 gap-10 items-center">
+        <div class="bg-white/5 border border-white/10 p-8 rounded-2xl text-center backdrop-blur-sm">
+          <div class="w-40 h-52 mx-auto bg-gradient-to-br from-[#0044FF] to-[#9D26B0] rounded-r-lg rounded-l-sm shadow-xl flex flex-col justify-between p-4 mb-4">
+            <div class="w-6 h-1 bg-[#E8AA42] rounded-full"></div>
+            <p class="font-heading font-bold text-[10px] uppercase tracking-widest text-white">Ebook Neurofrecuencia</p>
+          </div>
+          <span class="text-xs text-white/60">Recurso descargable</span>
+        </div>
+        <div>
+          <span class="inline-block text-xs font-heading font-bold uppercase tracking-widest text-[#E8AA42] mb-2">Autoexploración</span>
+          <h2 class="font-heading text-xl md:text-2xl font-bold tracking-tight mb-4">Adquiere el Ebook Oficial</h2>
+          <p class="text-base text-[#FBF3E8]/80 leading-relaxed mb-6">
+            Un recurso diseñado para acompañar tu proceso de autoconocimiento neurodivergente desde la amabilidad, la empatía y respetando plenamente tus tiempos.
+          </p>
+          <a href="#reservas" class="cta-button inline-block rounded-full px-7 py-3 font-heading text-xs font-bold uppercase tracking-wider text-white shadow-md">Obtener el Ebook</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN BLOG -->
+    <section id="blog" class="py-20 bg-white px-4">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center max-w-xl mx-auto mb-12">
+          <span class="inline-block text-xs font-heading font-bold uppercase tracking-widest text-[#0044FF] mb-2">Lecturas para tu ritmo</span>
+          <h2 class="font-heading text-xl md:text-2xl font-bold tracking-tight">Historias y Frecuencias</h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+          <article class="bg-[#EDF2FF]/30 rounded-2xl overflow-hidden border border-blue-900/10 p-6">
+            <span class="inline-block bg-blue-100 text-[#0044FF] text-[10px] font-bold px-2.5 py-0.5 rounded-full mb-3">Procesamiento</span>
+            <h3 class="font-heading text-base font-bold mb-2">Entendiendo el sobreestímulo sensorial</h3>
+            <p class="text-[#535050] text-xs leading-relaxed">Claves prácticas para identificar cuando tu sistema nervioso necesita una pausa profunda.</p>
+          </article>
+          <article class="bg-[#EDF2FF]/30 rounded-2xl overflow-hidden border border-blue-900/10 p-6">
+            <span class="inline-block bg-purple-100 text-[#9D26B0] text-[10px] font-bold px-2.5 py-0.5 rounded-full mb-3">Desmitificando</span>
+            <h3 class="font-heading text-base font-bold mb-2">El mito de la persona 'difícil'</h3>
+            <p class="text-[#535050] text-xs leading-relaxed">Cómo transformar las etiquetas limitantes en comprensión de tu verdadera naturaleza.</p>
+          </article>
+          <article class="bg-[#EDF2FF]/30 rounded-2xl overflow-hidden border border-blue-900/10 p-6">
+            <span class="inline-block bg-amber-100 text-[#8B5A7C] text-[10px] font-bold px-2.5 py-0.5 rounded-full mb-3">Herramientas</span>
+            <h3 class="font-heading text-base font-bold mb-2">Estrategias suaves de autorregulación</h3>
+            <p class="text-[#535050] text-xs leading-relaxed">Pequeños anclajes cotidianos que devuelven la calma a tu mente y cuerpo.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN RESERVAS -->
+    <section id="reservas" class="py-20 bg-[#FBF3E8] px-4 border-t border-blue-900/10">
+      <div class="max-w-3xl mx-auto text-center">
+        <span class="inline-block text-xs font-heading font-bold uppercase tracking-widest text-[#0044FF] mb-2">Reserva a tu ritmo</span>
+        <h2 class="font-heading text-xl md:text-2xl font-bold tracking-tight mb-4">Agenda tu Espacio</h2>
+        <p class="text-[#535050] text-sm mb-8 max-w-md mx-auto">Selecciona el horario que mejor se adapte a tu energía actual mediante nuestro sistema directo.</p>
+        
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-blue-900/10 text-center">
+          <i data-lucide="calendar-days" class="w-10 h-10 mx-auto text-[#0044FF] mb-3"></i>
+          <p class="text-[#535050] text-sm mb-5">Aquí se integrará el calendario de Acuity Scheduling para agendar citas sin fricción.</p>
+          <a href="#" class="cta-button inline-block rounded-full px-7 py-3 font-heading text-xs font-bold uppercase tracking-wider text-white shadow-md">Abrir Calendario de Citas</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="bg-[#101010] text-white py-8 px-4 text-center text-[11px]">
+    <div class="max-w-5xl mx-auto space-y-2 text-white/70">
+      <p><strong>Aviso legal:</strong> El contenido de esta web tiene fines educativos y de acompañamiento. No sustituye la atención médica especializada o psiquiátrica.</p>
+      <p>© 2026 Neurofrecuencia · Diseñado con criterios de accesibilidad sensorial.</p>
+    </div>
+  </footer>
+
+  <!-- Inicializar iconos -->
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
