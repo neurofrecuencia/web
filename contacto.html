@@ -8,26 +8,21 @@
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#FBF3E8">
   <link rel="canonical" href="https://neurofrecuencia.es/contacto.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <style>
-    :root { --ivory:#FBF3E8; --blue:#0044FF; --magenta:#9D26B0; --gold:#E8AA42; --text:#202124; --muted:#535050; }
-    body { font-family:'Open Sans',sans-serif; background:var(--ivory); color:var(--text); }
-    h1,h2,h3,.font-heading { font-family:'Montserrat',sans-serif; }
-    .cta-button { background:linear-gradient(105deg,#0044FF,#9D26B0); transition:transform .2s ease,box-shadow .2s ease; }
-    .cta-button:hover { transform:translateY(-2px); box-shadow:0 10px 25px rgba(157,38,176,.25); }
-    :focus-visible { outline:3px solid var(--gold); outline-offset:3px; }
-    .touch-target { min-width:44px; min-height:44px; }
-    @media (prefers-reduced-motion: reduce) { *,*::before,*::after { animation-duration:.01ms!important; animation-iteration-count:1!important; transition-duration:.01ms!important; scroll-behavior:auto!important; } }
-  </style>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <script>document.documentElement.classList.add('js');try{var c=JSON.parse(localStorage.getItem('nf-calma')||'{}');if(c.mov===undefined&&window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)c.mov=true;if(c.mov)document.documentElement.classList.add('calma-mov');if(c.contraste)document.documentElement.classList.add('calma-contraste');if(c.texto)document.documentElement.classList.add('calma-texto');}catch(e){}</script>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
 </head>
 <body>
   <header class="px-3 sm:px-4 pt-3">
     <nav class="mx-auto max-w-5xl rounded-2xl bg-white/95 px-4 py-3 shadow-md border border-blue-900/10" aria-label="Navegación principal">
       <div class="flex items-center justify-between gap-3">
         <a href="index.html" aria-label="Volver a Neurofrecuencia">
-          <img src="Logo 1_3.png" alt="Neurofrecuencia" class="h-9 w-auto">
+          <img src="logo-192.png" width="192" height="192" alt="Neurofrecuencia" class="h-9 w-auto">
         </a>
         <div class="flex items-center gap-2">
           <a href="https://neurofrecuencia.blogspot.com/" class="touch-target hidden sm:inline-flex items-center px-4 rounded-xl font-heading text-xs font-bold">BLOG</a>
@@ -39,6 +34,9 @@
 
   <main class="px-4 py-12 sm:py-16">
     <div class="max-w-2xl mx-auto">
+      <div class="mb-6">
+        <div class="sparkie-says"><img src="sparkie-sm.png" alt="" width="60" height="60" loading="lazy"><p class="bubble"><strong>Sparkie dice:</strong> Escribe como te salga: no hace falta explicarlo todo de una vez.</p></div>
+      </div>
       <section class="bg-white rounded-3xl p-6 sm:p-8 border border-blue-900/10 shadow-sm" aria-labelledby="form-title">
         <h1 id="form-title" class="font-heading text-2xl font-bold mb-2">Formulario de contacto</h1>
         <p class="text-sm text-[#535050] mb-6">Completa los datos y se abrirá tu aplicación de correo con el mensaje preparado para enviarlo.</p>
@@ -82,7 +80,6 @@
   </footer>
 
   <script>
-    lucide.createIcons();
     document.getElementById('contact-form').addEventListener('submit', function (event) {
       event.preventDefault();
       const nombre = document.getElementById('nombre').value.trim();
@@ -94,5 +91,6 @@
       window.location.href = 'mailto:info@neurofrecuencia.es?subject=' + subject + '&body=' + body;
     });
   </script>
+  <script defer src="site.js"></script>
 </body>
 </html>

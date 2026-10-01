@@ -12,26 +12,21 @@
   <meta property="og:description" content="Espacios de psicoeducación, comunidad y validación compartida entre iguales.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://neurofrecuencia.es/talleres-grupos.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <style>
-    :root { --ivory:#FBF3E8; --blue:#0044FF; --magenta:#9D26B0; --gold:#E8AA42; --night:#1B1140; --text:#202124; }
-    body { font-family:'Open Sans',sans-serif; background:var(--night); color:#fff; }
-    h1,h2,h3,.font-heading { font-family:'Montserrat',sans-serif; }
-    .cta-button { background:linear-gradient(105deg,#0044FF,#9D26B0); transition:transform .2s ease,box-shadow .2s ease; }
-    .cta-button:hover { transform:translateY(-2px); box-shadow:0 10px 25px rgba(157,38,176,.35); }
-    :focus-visible { outline:3px solid var(--gold); outline-offset:3px; }
-    .touch-target { min-width:44px; min-height:44px; }
-    @media (prefers-reduced-motion: reduce) { *,*::before,*::after { animation-duration:.01ms!important; animation-iteration-count:1!important; transition-duration:.01ms!important; scroll-behavior:auto!important; } }
-  </style>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <script>document.documentElement.classList.add('js');try{var c=JSON.parse(localStorage.getItem('nf-calma')||'{}');if(c.mov===undefined&&window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)c.mov=true;if(c.mov)document.documentElement.classList.add('calma-mov');if(c.contraste)document.documentElement.classList.add('calma-contraste');if(c.texto)document.documentElement.classList.add('calma-texto');}catch(e){}</script>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
 </head>
-<body>
+<body class="page-night">
   <header class="px-3 sm:px-4 pt-3">
     <nav class="mx-auto max-w-5xl rounded-2xl bg-white/95 px-4 py-3 shadow-md border border-blue-900/10 text-[#202124]" aria-label="Navegación principal">
       <div class="flex items-center justify-between gap-3">
         <a href="index.html" aria-label="Volver a Neurofrecuencia">
-          <img src="Logo 1_3.png" alt="Neurofrecuencia" class="h-9 w-auto">
+          <img src="logo-192.png" width="192" height="192" alt="Neurofrecuencia" class="h-9 w-auto">
         </a>
         <div class="flex items-center gap-2">
           <a href="index.html#servicios" class="touch-target hidden sm:inline-flex items-center px-4 rounded-xl font-heading text-xs font-bold hover:text-[#9D26B0]">SERVICIOS</a>
@@ -56,6 +51,10 @@
           <a href="contacto.html" class="cta-button touch-target inline-flex items-center justify-center rounded-full px-7 py-3 font-heading text-xs font-bold uppercase tracking-wider text-white">Preguntar por los próximos grupos</a>
           <a href="contacto.html" class="touch-target inline-flex items-center justify-center rounded-full px-7 py-3 font-heading text-xs font-bold uppercase tracking-wider border border-white/30 hover:bg-white/10 transition-colors">Escríbeme</a>
         </div>
+      </div>
+
+      <div class="mb-12">
+        <div class="sparkie-says on-dark"><img src="sparkie-sm.png" alt="" width="60" height="60" loading="lazy"><p class="bubble"><strong>Sparkie dice:</strong> Entre iguales no hace falta explicarse de más: se entiende.</p></div>
       </div>
 
       <section class="grid sm:grid-cols-3 gap-4 mb-12" aria-label="Datos del servicio">
@@ -125,6 +124,6 @@
     </div>
   </footer>
 
-  <script>lucide.createIcons();</script>
+  <script defer src="site.js"></script>
 </body>
 </html>

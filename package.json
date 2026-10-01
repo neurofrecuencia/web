@@ -1,0 +1,10 @@
+{
+  "name": "neurofrecuencia-web",
+  "private": true,
+  "scripts": {
+    "build:css": "tailwindcss -i ./src.css -o ./styles.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}

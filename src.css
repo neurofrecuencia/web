@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --charcoal: #101010; --ivory: #FBF3E8; --electric-blue: #0044FF;
+  --magenta: #9D26B0; --gold: #E8AA42; --night: #1B1140;
+  --text-main: #202124; --text-muted: #535050;
+}
+html { scroll-behavior: smooth; }
+body { font-family: 'Open Sans', sans-serif; background-color: var(--ivory); color: var(--text-main); overflow-x: hidden; }
+body.page-night { background-color: var(--night); color: #fff; }
+h1, h2, h3, .font-heading { font-family: 'Montserrat', sans-serif; }
+main section[id] { scroll-margin-top: 5rem; }
+
+.cta-button { background: linear-gradient(105deg, #0044FF, #9D26B0); transition: transform .2s ease, box-shadow .2s ease; }
+.cta-button:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(157,38,176,.3); }
+.icon-instagram { fill: url(#ig-grad); }
+
+:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+.skip-link { position: fixed; left: 1rem; top: -5rem; z-index: 100; background: var(--charcoal); color: #fff; padding: .75rem 1rem; border-radius: .75rem; }
+.skip-link:focus { top: 1rem; }
+.touch-target { min-width: 44px; min-height: 44px; }
+@media (max-width: 767px) {
+  .hero-title { font-size: clamp(1.8rem, 8vw, 2.5rem); line-height: 1.18; }
+  .mobile-menu-panel a { min-height: 48px; display: flex; align-items: center; }
+}
+
+/* ---------- Aparición suave al hacer scroll ---------- */
+.js .reveal { opacity: 0; transform: translateY(14px); transition: opacity .65s ease, transform .65s ease; }
+.js .reveal.is-visible { opacity: 1; transform: none; }
+
+/* ---------- Separador infinito dorado ---------- */
+.infinity-divider { display: flex; align-items: center; justify-content: center; gap: 1rem; padding: 1.75rem 1rem; background: var(--ivory); }
+.infinity-divider span { flex: 1; max-width: 12rem; height: 1px; }
+.infinity-divider span:first-child { background: linear-gradient(to right, transparent, rgba(232,170,66,.7)); }
+.infinity-divider span:last-child  { background: linear-gradient(to left,  transparent, rgba(232,170,66,.7)); }
+.infinity-divider svg { width: 3.25rem; height: 1.6rem; overflow: visible; filter: drop-shadow(0 0 5px rgba(232,170,66,.45)); }
+.infinity-divider path { fill: none; stroke: var(--gold); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 100; stroke-dashoffset: 0; }
+.js .infinity-divider path { stroke-dashoffset: 100; transition: stroke-dashoffset 1.6s ease .15s; }
+.js .infinity-divider.is-visible path { stroke-dashoffset: 0; }
+
+/* ---------- Sparkie ---------- */
+@keyframes sparkie-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
+.sparkie-float { animation: sparkie-float 5s ease-in-out infinite; }
+.sparkie-says { --b: rgba(16,16,16,.1); display: flex; align-items: center; gap: 1rem; max-width: 34rem; margin-inline: auto; text-align: left; }
+.sparkie-says img { width: 3.75rem; height: 3.75rem; flex: none; }
+.sparkie-says .bubble { position: relative; background: #fff; border: 1px solid var(--b); border-radius: 1rem; padding: .8rem 1.1rem; font-size: .875rem; line-height: 1.55; color: var(--text-muted); box-shadow: 0 4px 14px rgba(27,17,64,.06); }
+.sparkie-says .bubble::before { content: ""; position: absolute; left: -7px; top: 50%; width: 12px; height: 12px; background: inherit; border-left: 1px solid var(--b); border-bottom: 1px solid var(--b); transform: translateY(-50%) rotate(45deg); }
+.sparkie-says .bubble strong { color: var(--text-main); }
+.sparkie-says.on-dark { --b: rgba(255,255,255,.18); }
+.sparkie-says.on-dark .bubble { background: rgba(255,255,255,.08); color: rgba(255,255,255,.9); box-shadow: none; }
+.sparkie-says.on-dark .bubble strong { color: #fff; }
+
+/* ---------- Modo calma (botón + panel) ---------- */
+.calma-wrap { position: fixed; left: 1rem; bottom: 1rem; z-index: 60; font-family: 'Open Sans', sans-serif; }
+.calma-btn { display: inline-flex; align-items: center; gap: .5rem; min-height: 56px; padding: 4px 14px 4px 4px; border-radius: 999px; background: #fff; color: var(--text-main); border: 1px solid rgba(16,16,16,.12); box-shadow: 0 8px 22px rgba(27,17,64,.22); cursor: pointer; font: 700 .72rem 'Montserrat', sans-serif; letter-spacing: .06em; text-transform: uppercase; }
+.calma-btn img { width: 48px; height: 48px; }
+.calma-btn:hover { box-shadow: 0 10px 26px rgba(157,38,176,.3); }
+@media (max-width: 639px) { .calma-btn { padding: 4px; } .calma-btn .calma-label { display: none; } }
+.calma-panel { position: absolute; left: 0; bottom: calc(100% + .75rem); width: min(92vw, 21rem); background: #fff; color: var(--text-main); border: 1px solid rgba(16,16,16,.12); border-radius: 1.25rem; padding: 1.1rem; box-shadow: 0 18px 44px rgba(27,17,64,.28); }
+.calma-panel[hidden] { display: none; }
+.calma-head { display: flex; align-items: center; gap: .75rem; margin-bottom: .75rem; }
+.calma-head img { width: 44px; height: 44px; flex: none; }
+.calma-head h2 { font: 800 1rem 'Montserrat', sans-serif; margin: 0; }
+.calma-head p { font-size: .75rem; color: var(--text-muted); margin: 0; }
+.calma-close { margin-left: auto; width: 44px; height: 44px; border-radius: 12px; border: 0; background: transparent; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; color: var(--text-main); }
+.calma-close:hover { background: #F2ECFF; }
+.calma-list { list-style: none; margin: 0; padding: 0; display: grid; gap: .5rem; }
+.calma-switch { width: 100%; min-height: 52px; display: flex; align-items: center; justify-content: space-between; gap: .75rem; text-align: left; padding: .5rem .75rem; border-radius: .9rem; border: 1px solid rgba(16,16,16,.1); background: #FBF3E8; cursor: pointer; font-size: .85rem; color: var(--text-main); }
+.calma-switch small { display: block; font-size: .72rem; color: var(--text-muted); }
+.calma-switch .track { flex: none; width: 2.6rem; height: 1.5rem; border-radius: 999px; background: #c9c3d6; position: relative; transition: background .2s ease; }
+.calma-switch .track::after { content: ""; position: absolute; top: 3px; left: 3px; width: 18px; height: 18px; border-radius: 50%; background: #fff; transition: transform .2s ease; }
+.calma-switch[aria-checked="true"] .track { background: linear-gradient(105deg, #0044FF, #9D26B0); }
+.calma-switch[aria-checked="true"] .track::after { transform: translateX(1.1rem); }
+.calma-actions { display: flex; gap: .5rem; margin-top: .75rem; }
+.calma-actions button { flex: 1; min-height: 44px; border-radius: .8rem; border: 1px solid #0044FF; background: #fff; color: #0044FF; font: 700 .75rem 'Montserrat', sans-serif; cursor: pointer; }
+.calma-actions button[data-act="all"] { background: linear-gradient(105deg, #0044FF, #9D26B0); border-color: transparent; color: #fff; }
+.calma-note { margin: .75rem 0 0; font-size: .7rem; color: var(--text-muted); }
+
+/* ---------- Preferencias del Modo calma ---------- */
+html.calma-texto { font-size: 118.75%; }
+html.calma-mov, html.calma-mov *, html.calma-mov *::before, html.calma-mov *::after {
+  animation: none !important; transition: none !important; scroll-behavior: auto !important;
+}
+html.calma-mov .reveal { opacity: 1 !important; transform: none !important; }
+html.calma-mov .infinity-divider path { stroke-dashoffset: 0 !important; }
+html.calma-contraste body { color: #000; }
+html.calma-contraste [class*="text-[#535050]"], html.calma-contraste .sparkie-says .bubble,
+html.calma-contraste .calma-note, html.calma-contraste .calma-head p, html.calma-contraste .calma-switch small { color: #111 !important; }
+html.calma-contraste [class*="text-white/"], html.calma-contraste [class*="text-[#FBF3E8]/"],
+html.calma-contraste .sparkie-says.on-dark .bubble { color: #fff !important; }
+html.calma-contraste [class*="border-blue-900/10"], html.calma-contraste [class*="border-blue-950/10"],
+html.calma-contraste [class*="border-blue-950/15"] { border-color: rgba(16,16,16,.6) !important; }
+html.calma-contraste [class*="border-white/"] { border-color: rgba(255,255,255,.7) !important; }
+html.calma-contraste .sparkie-says { --b: rgba(16,16,16,.6); }
+html.calma-contraste .sparkie-says.on-dark { --b: rgba(255,255,255,.7); }
+html.calma-contraste [class*="bg-white/5"] { background-color: rgba(255,255,255,.14) !important; }
+html.calma-contraste :focus-visible { outline-width: 4px; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+  .js .reveal { opacity: 1; transform: none; }
+  .js .infinity-divider path { stroke-dashoffset: 0; }
+}
+@media print { .js .reveal { opacity: 1; transform: none; } .calma-wrap { display: none; } }
