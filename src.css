@@ -78,6 +78,16 @@ main section[id] { scroll-margin-top: 5rem; }
 .calma-actions button[data-act="all"] { background: linear-gradient(105deg, #0044FF, #9D26B0); border-color: transparent; color: #fff; }
 .calma-note { margin: .75rem 0 0; font-size: .7rem; color: var(--text-muted); }
 
+/* ---------- Sección de reservas ---------- */
+.agenda-card { position: relative; overflow: hidden; background: #fff; }
+.agenda-card::before { content: ""; position: absolute; top: -6rem; right: -5rem; width: 20rem; height: 20rem; border-radius: 50%; background: radial-gradient(closest-side, rgba(157,38,176,.14), transparent); pointer-events: none; }
+.agenda-card::after { content: ""; position: absolute; bottom: -7rem; left: -5rem; width: 20rem; height: 20rem; border-radius: 50%; background: radial-gradient(closest-side, rgba(0,68,255,.10), transparent); pointer-events: none; }
+.agenda-steps { counter-reset: paso; list-style: none; margin: 0; padding: 0; }
+.agenda-steps li { counter-increment: paso; position: relative; padding-left: 3.5rem; padding-bottom: 1.75rem; }
+.agenda-steps li:last-child { padding-bottom: 0; }
+.agenda-steps li::before { content: counter(paso); position: absolute; left: 0; top: 0; width: 2.5rem; height: 2.5rem; border-radius: 999px; background: linear-gradient(105deg, #0044FF, #9D26B0); color: #fff; font: 800 .95rem 'Montserrat', sans-serif; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 16px rgba(157,38,176,.25); }
+.agenda-steps li:not(:last-child)::after { content: ""; position: absolute; left: calc(1.25rem - 1px); top: 2.75rem; bottom: .25rem; width: 2px; background: linear-gradient(to bottom, rgba(157,38,176,.35), rgba(0,68,255,.1)); }
+
 /* ---------- Preferencias del Modo calma ---------- */
 html.calma-texto { font-size: 118.75%; }
 html.calma-mov, html.calma-mov *, html.calma-mov *::before, html.calma-mov *::after {
